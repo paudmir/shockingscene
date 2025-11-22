@@ -2,8 +2,8 @@
   "repository": "#",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config ./bundler/webpack.prod.js",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --config ./bundler/webpack.dev.js"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config ./bundler/webpack.prod.js",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack serve --config ./bundler/webpack.dev.js"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
@@ -16,14 +16,18 @@
     "glslify-loader": "^2.0.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "lil-gui": "^0.21.0",
     "mini-css-extract-plugin": "^2.1.0",
     "portfinder-sync": "0.0.2",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.0.0",
-    "three": "^0.130.1",
+    "three": "^0.150.1",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
